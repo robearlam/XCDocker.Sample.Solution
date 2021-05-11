@@ -348,3 +348,17 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Generated Assets
+SitecoreIdentityTokenSigning.pfx
+SitecoreIdentityTokenSigning.txt
+mkcert.exe
+
+# Certs & Data
+/docker/data/**/*.*
+!/docker/data/**/.gitkeep
+/docker/traefik/certs/**/*.*
+!/docker/traefik/certs/**/.gitkeep
+
+# environment file, to ignore changes
+.env

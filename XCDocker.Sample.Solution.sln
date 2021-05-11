@@ -26,6 +26,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{043B7E
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{D38986CC-B403-4797-975E-44CFD71565AC}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\CreateIdServerCert.ps1 = scripts\CreateIdServerCert.ps1
+		scripts\GenerateCerts.ps1 = scripts\GenerateCerts.ps1
+		scripts\PopulateEnv.ps1 = scripts\PopulateEnv.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

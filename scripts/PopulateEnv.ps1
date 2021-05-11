@@ -1,14 +1,122 @@
-../scripts/UpdateEnvCompose.ps1 -envRootPath 'C:\Sitecore Repo\Sitecore.Commerce.Container.SDK.2.0.159\xc1-cxa' `
-    -licenseFile "C:\Sitecore Repo\license.xml" `
-    -braintreeEnvironment "sandbox" `
-    -braintreeMerchantId "624qhcdgygp58k3n" `
-    -braintreePublicKey "vbfd3dm8dhb2pfvc" `
-    -braintreePrivateKey "915d38e6ca5f810dfd6ac5db1ed3412c" `
-    -telerikKey "v8NaQrbN6nrPYfmnKPhDqTbUqrzHgsfWyFGaRA23jei6gKsVWpexGDvM8toE3sQo" `
-    -idCert "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" `
-    -idSecret "utxHufWfiDEuqCK9a1kQ2sBvbX83gHMpVsrqptkvoOMttDjsvqrMmHwRG33aBYgL" `
-    -idPassword "Test123!" `
-    -xcIdSecret "Me4UXKNbdDxERVpaNsMRpsv8GVbkm4t8iJ7uhV9Ag8zUPNCXKm4me4rFinmAW8PX" `
-    -reportingApiKey "XyazBJCnfqbHkiC3EUeYFfznX4AUi8YC"
+[cmdletbinding()]
+param(
+    [Parameter(Mandatory)]
+    [string] $braintreeEnvironment,
+    [Parameter(Mandatory)]
+    [string] $braintreeMerchantId,
+    [Parameter(Mandatory)]
+    [string] $braintreePublicKey,
+    [Parameter(Mandatory)]
+    [string] $braintreePrivateKey,
+    [Parameter(Mandatory)]
+    [string] $idCert,
+    [Parameter(Mandatory)]
+    [string] $licenseFilePath,
+    [Parameter(Mandatory)]
+    [string]$telerikKey,
+    [Parameter(Mandatory)]
+    [string]$idSecret,
+    [Parameter(Mandatory)]
+    [string]$xcIdSecret,
+    [Parameter(Mandatory)]
+    [string]$idPassword,
+    [Parameter(Mandatory)]
+    [string]$reportingApiKey,
+    [ValidateSet("default", "process", "hyperv")]
+    [string]$isolation = "process"
+)
+<#
+.SYNOPSIS
+Script to facilitate the updating of the .env files for use in a docker-compose up and docker-compose build.
 
-    
+.PARAMETER braintreeEnvironment 
+[Parameter(Mandatory)]
+The Braintree environment. E.G. sandbox or production
+
+.PARAMETER braintreeMerchantId 
+[Parameter(Mandatory)]
+Your merchant ID for the Braintreepayment provider.
+
+.PARAMETER braintreePublicKey 
+[Parameter(Mandatory)]
+The public key associated to your Braintree account.
+
+.PARAMETER braintreePrivateKey
+[Parameter(Mandatory)]
+The private key associated to your Braintree account.
+
+.PARAMETER idCert 
+[Parameter(Mandatory)]
+Identity Server certificate used to encryptdata.
+
+.PARAMETER licenseFilePath 
+[Parameter(Mandatory)]
+Sitecore license file content converted to GZIP Compressed and Base64 encoded string.
+
+.PARAMETER telerikKey
+[Parameter(Mandatory)]
+Symmetric key used by the Telerik web controls. Length: 64-128 characters
+
+.PARAMETER idSecret
+[Parameter(Mandatory)]
+Shared secret between the Identity Server and client roles. Length: 64 characters
+
+.PARAMETER xcIdSecret
+[Parameter(Mandatory)]
+The client ID assigned to Commerce Engine Connect for Sitecore Identity. This ID is used to identify the Commerce Engine Connect with Commerce Engine.
+
+.PARAMETER idPassword
+[Parameter(Mandatory)]
+Password required to open the Identity Server certificate.
+
+.PARAMETER reportingApiKey
+[Parameter(Mandatory)]
+Symetric key used to access the Sitecore XDB Reporting Web API. Length: 64-128 characters
+
+.PARAMETER isolation
+[ValidateSet("default", "process", "hyperv")]
+Choose the isolation method. default will use the default method determiend by the OS, process will force process isolation, hyperv wil force hyperv isolation. To improve performance it is recommened to use "process" as isolation method for Windows 10 as default is hyperv.
+
+.EXAMPLE
+PS> PopulateEnv.ps1 -envRootPath (Join-Path $PWD "..") `
+                  -licenseFile "Location of your licence file" `
+                  -braintreeEnvironment "sandbox" `
+                  -braintreeMerchantId "Your merchant id" `
+                  -braintreePublicKey "Your public key" `
+                  -braintreePrivateKey "Your private key" `
+                  -telerikKey "Your Telerik Encryption Key" `
+                  -idCert "Your Sitecore Identity certificate" `
+                  -idSecret "Your Sitecore Identity secret" `
+                  -idPassword "Your Sitecore Identity password" `
+                  -xcIdSecret "Your XC Connect Client Secret" `
+                  -reportingApiKey "Your Sitecore Reporting API key"
+#>
+
+Import-Module (Join-Path $PSScriptRoot "ScriptSupport") -DisableNameChecking -Global
+
+$license = ConvertToCompressedBase64String -Path $licenseFilePath
+
+#Find all the .env files and updated them
+Get-ChildItem -Path './docker/' -Include '*.env' -Recurse | `
+ForEach-Object {
+    Write-Host "Updating [$_] file ..."
+
+    $envContent = Get-Content -Path $_
+    $envContent = $envContent -replace "SITECORE_LICENSE=.*", "SITECORE_LICENSE=$license"
+    $envContent = $envContent -replace "SITECORE_IDSECRET=.*", "SITECORE_IDSECRET=$idSecret"
+    $envContent = $envContent -replace "SITECORE_ID_CERTIFICATE=.*", "SITECORE_ID_CERTIFICATE=$idCert"
+    $envContent = $envContent -replace "SITECORE_ID_CERTIFICATE_PASSWORD=.*", "SITECORE_ID_CERTIFICATE_PASSWORD=$idPassword"
+    $envContent = $envContent -replace "TELERIK_ENCRYPTION_KEY=.*", "TELERIK_ENCRYPTION_KEY=$telerikKey"
+    $envContent = $envContent -replace "REPORTING_API_KEY=.*", "REPORTING_API_KEY=$reportingApiKey"
+    $envContent = $envContent -replace "XC_IDENTITY_COMMERCEENGINECONNECTCLIENT_CLIENTSECRET1=.*", "XC_IDENTITY_COMMERCEENGINECONNECTCLIENT_CLIENTSECRET1=$xcIdSecret"
+    $envContent = $envContent -replace "XC_ENGINE_BRAINTREEENVIRONMENT=.*", "XC_ENGINE_BRAINTREEENVIRONMENT=$braintreeEnvironment"
+    $envContent = $envContent -replace "XC_ENGINE_BRAINTREEMERCHANTID=.*", "XC_ENGINE_BRAINTREEMERCHANTID=$braintreeMerchantId"
+    $envContent = $envContent -replace "XC_ENGINE_BRAINTREEPUBLICKEY=.*", "XC_ENGINE_BRAINTREEPUBLICKEY=$braintreePublicKey"
+    $envContent = $envContent -replace "XC_ENGINE_BRAINTREEPRIVATEKEY=.*", "XC_ENGINE_BRAINTREEPRIVATEKEY=$braintreePrivateKey"
+    $envContent = $envContent -replace "ISOLATION=.*", "ISOLATION=$isolation"
+    $envContent = $envContent -replace "TRAEFIK_ISOLATION=.*", "TRAEFIK_ISOLATION=default" # There is no traefik that supports proces isolation in 1909 so important this stays as default and isn't overwritten by isolation above
+
+    Set-Content -Path $_ -Value $envContent -Force
+
+    Write-Host ".env file [$_] has been updated"
+}
