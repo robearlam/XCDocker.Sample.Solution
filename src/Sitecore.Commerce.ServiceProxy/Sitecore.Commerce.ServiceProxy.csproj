@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <Description>Sitecore Commerce Engine Connect Configuration</Description>
+    <Authors>Sitecore</Authors>
+    <PackageTags>$(PackageTags);Commerce;Engine;Connect;Config</PackageTags>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <AssemblyName>Sitecore.Commerce.ServiceProxy</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningsAsErrors />
+    <NoWarn>NU1603,CS0436,CS1591</NoWarn>
+    <OutputPath>bin</OutputPath>
+    <DocumentationFile>bin\Sitecore.Commerce.ServiceProxy.xml</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>NU1603,CS0436,CS1591</NoWarn>
+    <WarningsAsErrors />
+    <OutputPath>bin</OutputPath>
+    <DocumentationFile>bin\Sitecore.Commerce.ServiceProxy.xml</DocumentationFile>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Connected Services\CommerceOps\CommerceOpsCsdl.xml" />
+    <None Remove="Connected Services\CommerceShops\CommerceShopsCsdl.xml" />
+    <None Remove="Connected Services\CommerceShops\Csdl.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Connected Services\CommerceOps\CommerceOpsCsdl.xml" />
+    <EmbeddedResource Include="Connected Services\CommerceShops\CommerceShopsCsdl.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" version="3.1.5" />
+    <PackageReference Include="Microsoft.OData.Client" version="7.5.0" />
+    <PackageReference Include="Sitecore.Framework.Conditions" Version="5.0.0" />
+    <PackageReference Include="Sitecore.Kernel" Version="10.1.0" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{389FC06B-F543-41B8-9874-726DA9878DDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A330984-9652-4DA1-99D3-B55E6DEAC6AA}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sitecore.Commerce.Engine", "src\Sitecore.Commerce.Engine\Sitecore.Commerce.Engine.csproj", "{3E68F9A9-396C-487C-BEB9-C24E47721E2F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.Sample.AdventureWorks", "src\Plugin.Sample.AdventureWorks\Plugin.Sample.AdventureWorks.csproj", "{45E1A5F7-861D-4929-A4C4-E3FD9D898F23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.Sample.Payments.Braintree", "src\Plugin.Sample.Payments.Braintree\Plugin.Sample.Payments.Braintree.csproj", "{0296F347-F76D-4A81-9FB1-AE9CA0F0C064}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.Sample.Habitat", "src\Plugin.Sample.Habitat\Plugin.Sample.Habitat.csproj", "{72203E4B-DA74-405C-9D33-193B38A0AA33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{043B7ECF-C043-4E56-A67C-7DD5137F6B46}"
+	ProjectSection(SolutionItems) = preProject
+		docker\.env = docker\.env
+		docker\docker-compose.yml = docker\docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{D38986CC-B403-4797-975E-44CFD71565AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E68F9A9-396C-487C-BEB9-C24E47721E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E68F9A9-396C-487C-BEB9-C24E47721E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E68F9A9-396C-487C-BEB9-C24E47721E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E68F9A9-396C-487C-BEB9-C24E47721E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E1A5F7-861D-4929-A4C4-E3FD9D898F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E1A5F7-861D-4929-A4C4-E3FD9D898F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E1A5F7-861D-4929-A4C4-E3FD9D898F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E1A5F7-861D-4929-A4C4-E3FD9D898F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0296F347-F76D-4A81-9FB1-AE9CA0F0C064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0296F347-F76D-4A81-9FB1-AE9CA0F0C064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0296F347-F76D-4A81-9FB1-AE9CA0F0C064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0296F347-F76D-4A81-9FB1-AE9CA0F0C064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72203E4B-DA74-405C-9D33-193B38A0AA33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72203E4B-DA74-405C-9D33-193B38A0AA33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72203E4B-DA74-405C-9D33-193B38A0AA33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72203E4B-DA74-405C-9D33-193B38A0AA33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3E68F9A9-396C-487C-BEB9-C24E47721E2F} = {389FC06B-F543-41B8-9874-726DA9878DDC}
+		{45E1A5F7-861D-4929-A4C4-E3FD9D898F23} = {389FC06B-F543-41B8-9874-726DA9878DDC}
+		{0296F347-F76D-4A81-9FB1-AE9CA0F0C064} = {389FC06B-F543-41B8-9874-726DA9878DDC}
+		{72203E4B-DA74-405C-9D33-193B38A0AA33} = {389FC06B-F543-41B8-9874-726DA9878DDC}
+		{043B7ECF-C043-4E56-A67C-7DD5137F6B46} = {3A330984-9652-4DA1-99D3-B55E6DEAC6AA}
+		{D38986CC-B403-4797-975E-44CFD71565AC} = {3A330984-9652-4DA1-99D3-B55E6DEAC6AA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32813392-1C11-4D75-BF11-1ECBEF674669}
+	EndGlobalSection
+EndGlobal
