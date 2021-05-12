@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A330984-9652-4DA1-99D3-B55E6DEAC6AA}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		nuget.config = nuget.config
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -21,8 +22,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.Sample.Habitat", "sr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{043B7ECF-C043-4E56-A67C-7DD5137F6B46}"
 	ProjectSection(SolutionItems) = preProject
-		docker\.env = docker\.env
-		docker\docker-compose.yml = docker\docker-compose.yml
+		.env = .env
+		docker-compose.override.yml = docker-compose.override.yml
+		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{D38986CC-B403-4797-975E-44CFD71565AC}"
@@ -30,6 +32,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{D389
 		scripts\CreateIdServerCert.ps1 = scripts\CreateIdServerCert.ps1
 		scripts\GenerateCerts.ps1 = scripts\GenerateCerts.ps1
 		scripts\PopulateEnv.ps1 = scripts\PopulateEnv.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{281AD133-AA47-463D-88D4-0609E0780892}"
+	ProjectSection(SolutionItems) = preProject
+		docker\build\engine\Dockerfile = docker\build\engine\Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{7C414C5C-EACF-415C-B114-75F27256B861}"
+	ProjectSection(SolutionItems) = preProject
+		docker\build\engine\Dockerfile = docker\build\engine\Dockerfile
 	EndProjectSection
 EndProject
 Global
@@ -65,6 +77,8 @@ Global
 		{72203E4B-DA74-405C-9D33-193B38A0AA33} = {389FC06B-F543-41B8-9874-726DA9878DDC}
 		{043B7ECF-C043-4E56-A67C-7DD5137F6B46} = {3A330984-9652-4DA1-99D3-B55E6DEAC6AA}
 		{D38986CC-B403-4797-975E-44CFD71565AC} = {3A330984-9652-4DA1-99D3-B55E6DEAC6AA}
+		{281AD133-AA47-463D-88D4-0609E0780892} = {043B7ECF-C043-4E56-A67C-7DD5137F6B46}
+		{7C414C5C-EACF-415C-B114-75F27256B861} = {281AD133-AA47-463D-88D4-0609E0780892}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {32813392-1C11-4D75-BF11-1ECBEF674669}

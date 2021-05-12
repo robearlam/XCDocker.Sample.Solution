@@ -2,6 +2,8 @@
 A solution for customising a Sitecore Experience Commerce solution, running inside of Docker Containers.
 This is running Sitecore Experience Commerce 10.1
 
+These installation steps are heavily based on the <a href="https://sitecoredev.azureedge.net/~/media/16F7DA40F2D94F95AD152AF2D33430D3.ashx?date=20210317T215336">XC Installation Guide for Developer Workstation with Containers</a>
+
 ## Pre-Installation Steps
 
 - Download `Packages for On Premises WDP 2021.02-7.0.162` & `Sitecore Commerce Container SDK` from <a href="https://dev.sitecore.net/Downloads/Sitecore_Commerce/101/Sitecore_Experience_Commerce_101.aspx">Sitecore Downloads</a>.
@@ -40,11 +42,13 @@ Run
     -reportingApiKey <<32_CHAR_RANDOM_STRING>>
 ```
 
-### Stand up docker containers with the following commands
+### Start your containers
 
+Stand up docker containers with the following commands
 ```
 docker-compose up -d
 ```
+Wait for all containers to report `healthy`
 
 ### Bootstrap & Initialise Engine
 
@@ -101,4 +105,9 @@ Populate your hosts file with the following entries
 
 - Follow steps <a href="https://doc.sitecore.com/developers/101/sitecore-experience-commerce/en/create-a-commerce-tenant-and-site.html">here</a> to create the default Storefront & Tenant.
 - Perform a full database publish.
-- Perform a rebuild of the `Sitecore_master_index`, `Sitecore_web_index`,`Sitecore_sxa_master_index`, & `Sitecore_sxa_web_index` from the `indexing manager` in the `control panel` as in the step above.
+- Perform a rebuild of the `Siecore_master_index`, `Sitecore_web_index`,`Sitecore_sxa_master_index`, & `Sitecore_sxa_web_index` from the `indexing manager` in the `control panel` as in the step above.
+
+### Access Site
+
+- The site should be running now, you can access it at <a href="https://xc1cd.localhost/">https://xc1cd.localhost/</a>
+- Sometimes when loading the site for the first time you dont see any products showing, stopping and starting the docker containers should fix this.
