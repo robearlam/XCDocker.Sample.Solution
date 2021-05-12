@@ -53,7 +53,7 @@ services:
       - "14330:1433"
     volumes:
       - type: bind
-        source: c:\containers\mssql-data
+        source: ./data/mssql-data
         target: c:\data
   solr:
     isolation: ${ISOLATION}
@@ -63,7 +63,7 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: c:\containers\solr-data
+        source: ./data/solr-data
         target: c:\data
     environment:
       SOLR_MODE: solrcloud

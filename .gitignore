@@ -361,4 +361,4 @@ mkcert.exe
 !/docker/traefik/certs/**/.gitkeep
 
 # environment file, to ignore changes
-.env
+/docker/.env
