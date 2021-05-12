@@ -17,7 +17,7 @@ services:
       - source: \\.\pipe\docker_engine
         target: \\.\pipe\docker_engine
         type: npipe
-      - ./traefik:C:/etc/traefik
+      - ./docker/traefik:C:/etc/traefik
     restart: unless-stopped
     depends_on:
       cd:
@@ -53,7 +53,7 @@ services:
       - "14330:1433"
     volumes:
       - type: bind
-        source: ./data/mssql-data
+        source: ./docker/data/mssql-data
         target: c:\data
   solr:
     isolation: ${ISOLATION}
@@ -63,7 +63,7 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: ./data/solr-data
+        source: ./docker/data/solr-data
         target: c:\data
     environment:
       SOLR_MODE: solrcloud
@@ -158,7 +158,7 @@ services:
       - "traefik.http.routers.cd-secure.tls=true"
       - "traefik.http.routers.cd-secure.middlewares=force-STS-Header"
     volumes:
-      - C:\containers\cd\domains-shared:C:\inetpub\wwwroot\App_Config\Security-Shared:RW
+      - ./docker/data/cd/domains-shared:C:\inetpub\wwwroot\App_Config\Security-Shared:RW
   cm:
     isolation: ${ISOLATION}
     image: ${XC_SITECORE_DOCKER_REGISTRY}sitecore-xc1-cm:${XC_PACKAGES_TAG}
@@ -229,7 +229,7 @@ services:
       - "traefik.http.routers.cm-secure.tls=true"
       - "traefik.http.routers.cm-secure.middlewares=force-STS-Header"
     volumes:
-      - C:\containers\cm\domains-shared:C:\inetpub\wwwroot\App_Config\Security-Shared:RW
+      - ./docker/data/cm/domains-shared:C:\inetpub\wwwroot\App_Config\Security-Shared:RW
   prc:
     isolation: ${ISOLATION}
     image: ${XC_SITECORE_DOCKER_REGISTRY}sitecore-xc1-prc:${XC_PACKAGES_TAG}
@@ -510,7 +510,7 @@ services:
       COMMERCEENGINE_BraintreePublicKey: ${XC_ENGINE_BRAINTREEPUBLICKEY}
       COMMERCEENGINE_BraintreePrivateKey: ${XC_ENGINE_BRAINTREEPRIVATEKEY}
     volumes:
-      - C:\containers\engine\catalogs:C:\engine\catalogs:RO
+      - ./docker/data/engine/catalogs:C:\engine\catalogs:RO
     labels:
       - "traefik.enable=true"
       - "traefik.http.middlewares.force-STS-Header.headers.forceSTSHeader=true"

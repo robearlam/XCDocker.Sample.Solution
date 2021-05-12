@@ -43,7 +43,6 @@ Run
 ### Stand up docker containers with the following commands
 
 ```
-cd docker
 docker-compose up -d
 ```
 
@@ -101,4 +100,5 @@ Populate your hosts file with the following entries
 ### Create Tenant & Storefront
 
 - Follow steps <a href="https://doc.sitecore.com/developers/101/sitecore-experience-commerce/en/create-a-commerce-tenant-and-site.html">here</a> to create the default Storefront & Tenant.
-- Perform a rebuild of the `Sitecore_master_index` & `Sitecore_web_index` from the `indexing manager` in the `control panel` as in the step above.
+- Perform a full database publish.
+- Perform a rebuild of the `Sitecore_master_index`, `Sitecore_web_index`,`Sitecore_sxa_master_index`, & `Sitecore_sxa_web_index` from the `indexing manager` in the `control panel` as in the step above.

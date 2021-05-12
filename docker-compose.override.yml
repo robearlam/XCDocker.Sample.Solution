@@ -1,0 +1,33 @@
+version: "2.4"
+services:
+
+  engineBuild:
+    container_name: xc-engine-custom
+    image: xc-engine-custom:latest
+    build:
+      context: ./
+      dockerfile: ./Docker/build/engine/Dockerfile
+      args:
+        BUILD_IMAGE: ${ENGINE_BUILD_IMAGE}
+        RUNTIME_IMAGE: ${XC_SITECORE_DOCKER_REGISTRY}sitecore-xc-engine:${XC_PACKAGES_TAG}
+    scale: 0
+
+  engine-authoring:
+    image: xc-engine-custom:latest
+    depends_on:
+      - engineBuild
+
+  engine-shops:
+    image: xc-engine-custom:latest
+    depends_on:
+      - engineBuild
+
+  engine-minions:
+    image: xc-engine-custom:latest
+    depends_on:
+      - engineBuild
+
+  engine-ops:
+    image: xc-engine-custom:latest
+    depends_on:
+      - engineBuild    
